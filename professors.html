@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>Term Project - CS332F11</title>
+    <link rel="stylesheet" href="./assets/styles/styles.css" />
+  </head>
+
+  <body class="bg-gray-200">
+    <section class="flex h-screen w-full items-center justify-center">
+      <form
+        class="m-5"
+        action="./assets/php/get_sections_by_professor.php"
+        method="post">
+        <div class="flex flex-col space-y-2">
+          <label for="professor-ssn" class="text-2xl font-semibold">
+            Professor SSN
+          </label>
+          <div class="flex flex-row space-x-3">
+            <input
+              type="text"
+              id="professor-ssn"
+              name="professor-ssn"
+              required
+              class="w-full rounded-sm bg-gray-100 p-1 text-2xl text-black shadow-xl" />
+            <button
+              type="submit"
+              name="submit"
+              class="text-1xl whitespace-nowrap rounded-md bg-red-400 py-1 px-4 font-semibold text-white shadow-xl transition-colors duration-200 hover:bg-red-500 active:translate-y-1 active:shadow">
+              list classes
+            </button>
+          </div>
+        </div>
+      </form>
+      <form
+        class="m-5"
+        action="./assets/php/get_grades_by_course_and_section.php"
+        method="post">
+        <div class="flex flex-col space-y-2">
+          <label for="course-number" class="text-2xl font-semibold">
+            Course Number
+          </label>
+          <div class="flex flex-row space-x-3">
+            <input
+              type="text"
+              id="course-number"
+              name="course-number"
+              required
+              class="w-full rounded-sm bg-gray-100 p-1 text-2xl text-black shadow-xl" />
+          </div>
+        </div>
+        <div class="flex flex-col space-y-2">
+          <label for="section-number" class="text-2xl font-semibold">
+            Section Number
+          </label>
+          <div class="flex flex-row space-x-3">
+            <input
+              type="text"
+              id="section-number"
+              name="section-number"
+              required
+              class="w-full rounded-sm bg-gray-100 p-1 text-2xl text-black shadow-xl" />
+            <button
+              type="submit"
+              name="submit"
+              class="text-1xl whitespace-nowrap rounded-md bg-red-400 py-1 px-4 font-semibold text-white shadow-xl transition-colors duration-200 hover:bg-red-500 active:translate-y-1 active:shadow">
+              list grades
+            </button>
+          </div>
+        </div>
+      </form>
+    </section>
+  </body>
+</html>
